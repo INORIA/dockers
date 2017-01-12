@@ -1,0 +1,12 @@
+zabbix-agent:
+  image: zabbix/zabbix-agent
+  hostname: <HOSTNAME>
+  ports:
+    - "10050:10050"
+  volumes:
+    - /:/rootfs
+    - /var/run:/var/run
+  environment:
+    - ZBX_HOSTNAME=<HOSTNAME>
+    - ZBX_SERVER_HOST=<ZABBIX SERVER IP/DNS NAME>
+
